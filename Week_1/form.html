@@ -1,0 +1,67 @@
+<html>
+	<head>
+		<title>Form</title>
+		<style>
+			form{
+				padding: 15;
+			}
+			.button {
+				font: bold 11px Arial;
+				text-decoration: none;
+				background-color: #EEEEEE;
+				color: #333333;
+				padding: 2px 6px 2px 6px;
+				border-top: 1px solid #CCCCCC;
+				border-right: 1px solid #333333;
+				border-bottom: 1px solid #333333;
+				border-left: 1px solid #CCCCCC;
+			}
+		</style>
+	</head>
+	<body>
+		<FORM METHOD=POST ACTION="script_url">
+			<p>
+				First Name: <INPUT TYPE="text" NAME="FirstName" VALUE="First Name" SIZE=20> <BR><BR>
+				Last Name: <INPUT TYPE="text" NAME="LastName" VALUE="Last Name" SIZE=20>
+			</p>
+			<p>
+				<B>What is your class? </B><br>
+				<SELECT>
+					<OPTION VALUE="Ranger">Ranger
+					<OPTION VALUE="Warrior">Warrior
+					<OPTION VALUE="Paladin">Paladin
+					<OPTION VALUE="Wizard">Wizard
+				<SELECT>
+			</p>
+			<p>
+				<B>Preferred Weapon:</B>
+				<INPUT TYPE="radio" VALUE="Bow">Bow
+				<INPUT TYPE="radio" VALUE="Long_Sword">Long Sword
+				<INPUT TYPE="radio" VALUE="Axe">Axe
+				<INPUT TYPE="radio" VALUE="Staff">Staff
+			</p>
+			<p>
+				<B>Defeated Beasts: </B><br>
+				<INPUT TYPE="checkbox" VALUE="Beholder">Beholder
+				<INPUT TYPE="checkbox" VALUE="Dragon">Dragon
+				<INPUT TYPE="checkbox" VALUE="Tarrasque">Tarrasque
+				<INPUT TYPE="checkbox" VALUE="Fiend">Fiend
+			</p>
+			<p>
+				<B>Did you like this survey?</B>
+				<SELECT>
+					<OPTION VALUE="Yes">Yes
+					<OPTION VALUE="Absolutely">Absolutely
+					<OPTION VALUE="Sure">Sure
+					<OPTION VALUE="Yes again">Yes again
+					<OPTION VALUE="I guess">I guess
+				<SELECT>
+			</p>
+			<p>
+				<input type="submit">
+				<input type="reset">
+				<a href="index.html" class="button">Return</a>
+			</p>
+		</FORM>
+	</body>
+</html>
