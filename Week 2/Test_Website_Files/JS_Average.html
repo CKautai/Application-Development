@@ -1,0 +1,68 @@
+<html>
+	<head>
+		<title>Grade Calculator</title>
+		<style>
+			form{
+				padding: 15;
+			}
+			.button {
+				font: bold 11px Arial;
+				text-decoration: none;
+				background-color: #EEEEEE;
+				color: #333333;
+				padding: 2px 6px 2px 6px;
+				border-top: 1px solid #CCCCCC;
+				border-right: 1px solid #333333;
+				border-bottom: 1px solid #333333;
+				border-left: 1px solid #CCCCCC;
+			}
+		</style>
+
+	</head>
+	<body>
+			<p>
+				Web Design Grade: <INPUT TYPE="number" id = "Grade_1" SIZE=20><br>
+				Programming Grade: <INPUT TYPE="number" id = "Grade_2" SIZE=20><br>
+				Data Structure: <INPUT TYPE="number" id = "Grade_3" SIZE=20><br>
+			</p>
+			<p>
+				<B>Did you like this survey?</B>
+				<SELECT>
+					<OPTION VALUE="Yes">Yes
+					<OPTION VALUE="Absolutely">Absolutely
+					<OPTION VALUE="Sure">Sure
+					<OPTION VALUE="Yes again">Yes again
+					<OPTION VALUE="I guess">I guess
+				<SELECT>
+			</p>
+			
+			<p>
+				<button onclick="formdata()">Calculate</button>
+				<input type="reset">
+				<a href="index.html" class="button">Return</a>
+			</p>
+			<p>
+				Total: <p id = "Total"></p>
+				Grade Average: <p id = "Average"></p>
+			</p>
+		<script>
+			function formdata()
+			{
+
+				var Grade_1= document.getElementById("Grade_1").value;
+				var Grade_2 = document.getElementById("Grade_2").value;
+				var Grade_3 = document.getElementById("Grade_3").value;
+				let Total = +Grade_1 + +Grade_2 + +Grade_3;
+				let Average = Total / 3;
+				
+				
+				document.getElementById("Total").innerHTML = Total;
+				document.getElementById("Average").innerHTML = Average;
+			}
+			function FindSum(){
+				
+			}
+			
+		</script>
+	</body>
+</html>
