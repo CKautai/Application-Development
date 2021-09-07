@@ -1,0 +1,105 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Courier New', monospace;
+
+  }
+
+  body {
+    text-align: center;
+    background-color: #418fe7;
+    color: #ffffff;
+  }
+
+/* Style the top navigation bar */
+.topnav {
+overflow: hidden;
+background-color: #333;
+text-align: center;
+}
+
+/* Style the topnav links */
+.topnav a {
+display: inline-block;
+color: #f2f2f2;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+
+}
+
+/* Change color on hover */
+.topnav a:hover {
+background-color: #ddd;
+color: #040F0F;
+}
+
+.topnav li{
+display: inline;
+}
+
+
+  /* Style the header */
+  .header {
+    text-align: center;
+    font-size: 35px;
+    font-weight: 900;
+    color: #ecfd00;
+    text-shadow: 0 0 0px #DEE2EC, 0 0 50px #ecfd00;
+  }
+
+  /* Container for flexboxes */
+  .row {
+    display: -webkit-flex;
+    display: flex;
+    text-align: center;
+    float:center;
+
+  }
+
+  /* Create three unequal columns that sits next to each other */
+  .column {
+    padding: 10px;
+    text-align: center;
+    max-width: 1000px;
+    margin: auto;
+
+  }
+
+  /* small column */
+  .column.small {
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+  }
+
+  /* medium column */
+  .column.medium {
+    -webkit-flex: 2;
+    -ms-flex: 2;
+    flex: 2;
+  }
+
+  /* large column */
+  .column.large {
+    -webkit-flex: 3;
+    -ms-flex: 3;
+    flex: 3;
+  }
+
+  /* Style the footer */
+  .footer {
+    padding: 10px;
+    text-align: center;
+  }
+
+  /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+  @media (max-width: 600px) {
+    .row {
+      -webkit-flex-direction: row;
+      flex-direction: row;
+      text-align: center;
+    }
+  }
+
+
+
