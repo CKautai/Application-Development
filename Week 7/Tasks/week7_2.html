@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <script src="https://unpkg.com/vue@next"></script>
+  <title>SIT 120 Tasks</title>
+  <link href = "StyleSheet.css" rel="stylesheet">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+  <div class="header">
+    <h1>Week 7</h1>
+  </div>
+  <!-- Navigation -->
+
+    <ul class="topnav">
+      <li><a href="week1.html">Week 1</a></li>
+      <li><a href="week2.html">Week 2</a></li>
+      <li><a href="week3.html">Week 3</a></li>
+      <li><a href="week4.html">Week 4</a></li>
+      <li><a href="week5.html">Week 5</a></li>
+      <li><a href="week6.html">Week 6</a></li>
+      <li><a href="week7.html">Week 7</a></li>
+      <li><a href="week7_2.html">Week 7.2</a></li>
+    </ul>
+    <div class="column large">
+      <div class="row">
+        <div class="column large">
+          <div id="v-model-example" class="demo">
+            <p>First name: {{ firstName }}</p>
+            <p>Last name: {{ lastName }}</p>
+            <p>Birth year: {{ birthYear }}</p>
+            <user-name
+            v-model:first-name="firstName"
+            v-model:last-name="lastName"
+            v-model:birth-year="birthYear"
+          ></user-name>
+        </div>
+       </div>
+      </div>
+    </div>
+  <div class="footer">
+    <p>By Caleb Kautai</p>
+  </div>
+
+
+
+  <script>
+
+    const UserName = {
+      props: {
+        firstName: String,
+        lastName: String,
+        birthYear: Number,
+      },
+      template: `
+        <input 
+          type="text"
+          :value="firstName"
+          @input="$emit('update:firstName', $event.target.value)">
+
+        <input
+          type="text"
+          :value="lastName"
+          @input="$emit('update:lastName', $event.target.value)">
+
+        <input
+          type="number"
+          :value="birthYear"
+          @input="$emit('update:birthYear.number', $event.target.value)">
+      `
+    };
+
+    const HelloVueApp = {
+      components: {
+        UserName,
+      },
+      data() {
+        return {
+          firstName: 'Caleb',
+          lastName: 'Kautai',
+          birthYear: 2001,
+        };
+      },
+    };
+
+    Vue.createApp(HelloVueApp).mount('#v-model-example')
+
+  </script>
+</body>
+
+</html>
